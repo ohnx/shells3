@@ -68,7 +68,7 @@ function putS3
     -H "Content-Type: $content_type" \
     -H "$acl" \
     -H "Authorization: AWS ${key}:$signature" \
-    "https://$endpoint/$bucket$aws_path$filename"
+    "$base_url$aws_path$filename"
 
   case "$?" in
     0) echo "$base_url$aws_path$filename"
