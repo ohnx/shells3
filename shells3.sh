@@ -54,7 +54,7 @@ function putS3
   fi
 
   aws_path="/"
-  date=$(date +"%a, %d %b %Y %T %z")
+  date=$(date +"%a, %d %b %Y %T %Z")
   acl="x-amz-acl:public-read"
   cache_control="public, max-age=315360000"
 
